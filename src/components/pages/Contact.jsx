@@ -1,18 +1,32 @@
 import React from "react";
 import Sectiontitle from "../Sectiontitle";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit =async (data) => {
+    const userInfo = {
+      name : data.name,
+      email : data.email,
+      number : data.number,
+      subject : data.subject,
+      message : data.message
+    };
+    await axios.post("http://localhost:8000/contact",userInfo).then((res)=>{
+      const message = JSON.stringify(res.data.message)
+      toast.success(message);
+      reset();
+    }).catch((err)=>{console.log(err)});
+  };
 
-  console.log(watch("example"));
   return (
     <div>
       <Sectiontitle title="Say Hello" id="contact" />
@@ -67,7 +81,7 @@ export default function Contact() {
             {...register("subject", { required: true })}
               type="text"
               placeholder="Subject"
-              className="input  w-full "
+              className="input border-none  w-full "
             />
             {errors.subject && <span>This field is required</span>}
             </label>

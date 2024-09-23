@@ -7,23 +7,23 @@ export default function Project() {
         {
             id : "1234",
             title : "Book-Store",
-            technology : "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            description : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quo quisquam sit explicabo tempore nihil voluptatem corporis deserunt odio distinctio delectus sint eligendi quidem, voluptates soluta quia. Sequi, illum soluta.",
+            technology : "Built using MERN stack (MongoDB, Express.js, React, Node.js) with additional technologies such as Redux and React Router and tailwind-in-JS library .",
+            description : "Book-Store is a full-stack e-commerce application that allows users to browse and purchase books online. The application features a user-friendly interface, search functionality, book categorization, and a secure payment gateway. Built using the MERN stack, Book-Store leverages the power of MongoDB for data storage, Express.js for server-side routing, and React for a seamless user experience.",
             link : "http://localhost:5173/"
         },
        
         {
             id : "1234",
-            title : "E-Commmerce",
-            technology : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            description : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quo quisquam sit explicabo tempore nihil voluptatem corporis deserunt odio distinctio delectus sint eligendi quidem, voluptates soluta quia. Sequi, illum soluta.",
+            title : "Weather-Forecasting",
+            technology : "Built using MERN stack (MongoDB, Express.js, React, Node.js) with additional technologies such as OpenWeatherMap API for weather data and React Hooks for state management",
+            description : "Weather Forecasting is a real-time weather application that provides users with accurate and personalized weather information. The application features a user-friendly interface, real-time weather updates, location-based forecasting, and historical weather data. Built using the MERN stack, Weather Forecasting leverages the power of MongoDB for data storage, Express.js for server-side routing, and React for a responsive and interactive user interface.",
             link : "http://localhost:5173/"
         },
         {
             id : "1234",
             title : "Chat Box",
-            technology : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            description : " Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quo quisquam sit explicabo tempore nihil voluptatem corporis deserunt odio distinctio delectus sint eligendi quidem, voluptates soluta quia. Sequi, illum soluta.",
+            technology : "Built using MERN stack (MongoDB, Express.js, React, Node.js) with additional technologies such as Socket.IO for real-time communication and Redux for state management",
+            description : "Chat Box is a real-time messaging application that enables users to communicate with each other seamlessly. The application features a user-friendly interface, real-time messaging, user authentication, and authorization. Built using the MERN stack, Chat Box leverages the power of MongoDB for data storage, Express.js for server-side routing, and React for a responsive and interactive user interface.",
             link : "http://localhost:5173/"
         },
     ]
@@ -53,13 +53,14 @@ export default function Project() {
         })}
       </div>
       <div className="flex flex-col gap-3 sm:m-0 mx-10 w-5/6">
-        <h1 className="text-secondary text-xl ">
+        <h1 className="text-secondary text-2xl ">
           {Project[selectedItemIndex].title}
         </h1>
         <h1 className="text-tertiary text-xl text-justify">
           {Project[selectedItemIndex].technology}
         </h1>
-        <p className="text-white text-justify ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat! Facere dignissimos quas adipisci qui quo minus molestias autem omnis, quos, eaque asperiores nemo. Officiis fuga iure vero quo quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus sit quasi optio in, quod deserunt distinctio eveniet aliquam maxime aperiam sequi et libero quo enim cupiditate. Quisquam, totam soluta!</p>
+        <p className="text-white text-justify ">{Project[selectedItemIndex].description}</p>
+        {/* <a href="" className='text-blue-500'>{Project[selectedItemIndex].link}</a> */}
       </div>
     </div>
   </div>
