@@ -20,7 +20,7 @@ export default function Contact() {
       subject : data.subject,
       message : data.message
     };
-    await axios.post("http://localhost:8000/contact",userInfo).then((res)=>{
+    await axios.post("https://portfolio-backend-rohan.vercel.app/contact",userInfo).then((res)=>{
       const message = JSON.stringify(res.data.message)
       toast.success(message);
       reset();
