@@ -20,7 +20,7 @@ export default function Contact() {
       subject : data.subject,
       message : data.message
     };
-    axios.post("https://portfolio-backend-rohan.vercel.app/contact",userInfo).then((res)=>{
+    axios.post("https://portfolio-backend-8pii.onrender.com/contact",userInfo).then((res)=>{
       const message = JSON.stringify(res.data.message)
       toast.success(message);
       reset();
