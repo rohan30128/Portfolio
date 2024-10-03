@@ -1,6 +1,6 @@
 import React from 'react'
 import Sectiontitle from '../Sectiontitle';
-import webanimation from "../../../public/webanimation.gif";
+import readmore from "../../../public/read-more.gif"
 
 export default function About() {
   const skills = ["Javescript","React","Node","Express","MongoDB","SQL"]
@@ -9,7 +9,8 @@ export default function About() {
       <Sectiontitle title="About Me" id="about"/>
       <div className="flex md:gap-12   gap-28 flex-col md:flex-row w-full">
         <div className='h-[50vh] md:ml-3 md:w-1/3'>
-        <img src={webanimation} alt=""  className='sm:w-full w-full rounded sm:h-full h-96' />
+        <img src={readmore} alt=""  className='sm:w-full w-full rounded sm:h-full h-96' />
+       
         </div>
         <div className='flex flex-col text-white gap-8 w-5/6 md:ml-5 mx-auto text-justify'>
           <p >Hi, I'm Rohan Gupta, a passionate Web developer with a knack for building dynamic and responsive web applications. I specialize in MongoDB, Express.js, React, and Node.js, allowing me to create seamless user experiences from the ground up.</p>
